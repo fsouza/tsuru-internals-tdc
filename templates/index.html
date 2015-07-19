@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Fala galera!</title>
+	</head>
+	<body>
+		<h1>Olá galera do TDC!</h1>
+		<p>
+		{% if NAME %}
+			Oi, {{ NAME }}!
+		{% else %}
+			Defina a variável de ambiente $NAME para ter uma mensagem melhor! :)
+		{% endif %}
+		</p>
+	</body>
+</html>
