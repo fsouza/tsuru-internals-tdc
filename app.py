@@ -9,6 +9,10 @@ app = Flask(__name__)
 def hello():
     return render_template("index.html", **os.environ)
 
+@app.route("/healthcheck")
+def health():
+    return "WORKING"
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", "5000"))
     debug = os.environ.get("DEBUG") in ("True", "true", "t", "1")
